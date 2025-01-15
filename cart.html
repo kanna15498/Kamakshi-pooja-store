@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Cart & Checkout</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Pooja Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="#cart-page" class="view-cart-btn">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Page -->
+    <div id="cart-page" class="page">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="btn-primary continue-shopping">← Continue Shopping</button>
+            </div>
+
+            <div class="cart-items">
+                <!-- Cart items dynamically populated via JS -->
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <p>Total Items: <span class="cart-total-items">0</span></p>
+                    <p>Total Price: ₹<span class="cart-total-price">0</span></p>
+                </div>
+                <button class="btn-primary proceed-to-checkout">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Page -->
+    <div id="checkout-page" class="page" style="display: none;">
+        <div class="checkout-container">
+            <h2>Checkout</h2>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment" value="credit-card" checked>
+                    Credit/Debit Card
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="upi">
+                    UPI
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="cash-on-delivery">
+                    Cash on Delivery
+                </label>
+            </div>
+            <button class="btn-primary pay-now-btn">Pay Now</button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

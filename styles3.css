@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Ensure it fills the whole page */
+}
+
+.auth-container {
+    background: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.auth-container h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #d32f2f; /* Red */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #3e2723; /* Reddish brown */
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+    border: 1px solid #388e3c; /* Green */
+    outline: none;
+    background-color: #fff;
+}
+
+.btn-primary {
+    background-color: #fbc02d; /* Yellow */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c2185b; /* Red */
+}
+
+.switch-form {
+    color: #388e3c; /* Green */
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.switch-form:hover {
+    color: #2c6c32; /* Darker green */
+}
+
+/* Animations for Form Transitions */
+.auth-page {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Ensure both forms are centered */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Fix content alignment when switching between forms */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Ensure that the container takes up full space */
+.auth-container {
+    max-width: 100%;
+    width: 100%;
+}

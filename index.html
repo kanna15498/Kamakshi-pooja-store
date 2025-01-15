@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamakshi Pooja sample Store </title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="splash-screen">
+        <div class="splash-content">
+          <h1 class="splash-title">UI & UX by</h1>
+          <h2 class="splash-name">Rajesh Kanna Darla</h2>
+        </div>
+      </div>
+      
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="kamakshi.png" alt="Pooja Store Logo">
+        </div>
+        <h1 class="store-title">Kamakshi Pooja Store</h1>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li class="dropdown">
+                <a href="#products">Products</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#kalash">Kalash Sets</a></li>
+                    <li><a href="#idols">Idols</a></li>
+                    <li><a href="#kits">Ritual Kits</a></li>
+                    <li><a href="#products">View more</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#pooja-kits">Pooja kits</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#kalash">Kamakshi vrath kit</a></li>
+                    <li><a href="#idols">Ganesh vrath kit</a></li>
+                    <li><a href="#kits">Shiva pooja kit</a></li>
+                    <li><a href="#pooja-kits">View more</a></li>
+                </ul>
+            </li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="login.html">Sign Up</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Header Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div> <!-- Background div -->
+        <div class="hero-content">
+            <h1>Welcome to Pooja Store</h1>
+            <p>Discover customizable pooja items for your spiritual needs.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <img src="harathi.png" alt="Customizable Kits">
+                <h3>Customizable Kits</h3>
+                <p>Tailor-made pooja kits for every occasion.</p>
+            </div>
+            <div class="feature">
+                <img src="kalash.png" alt="Premium Quality">
+                <h3>Premium Quality</h3>
+                <p>Authentic items for your spiritual journey.</p>
+            </div>
+            <div class="feature">
+                <img src="pka.png" alt="Wide Variety">
+                <h3>Wide Variety</h3>
+                <p>A complete range of pooja essentials.</p>
+            </div>
+        </div>
+    </section>  
+
+<!-- Product Display Section -->
+<section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+    </div>
+</section>
+
+<!-- Pooja Kit section -->
+
+<section id="pooja-kits" class="product-section" >
+    <h2 class="section-title">Pooja Kits</h2>
+    <div class="product-grid">
+        <!-- Example Kit Card -->
+        <div class="product-card" data-id="1">
+            <img src="ganesh.png" alt="Pooja Kit 1" class="product-img">
+            <h3 class="product-name">Ganesh vrath Kit</h3>
+            <p class="product-quantity">Includes: 10 Items</p>
+            <div class="quantity-counter">
+                <button class="decrement" onclick="updateItemQuantity(1, -1)">-</button>
+                <span class="quantity" data-id="pooja-kit-1">0</span>
+                <button class="increment" onclick="addToCart(1, 'pooja-kit-1', 10.00, 'ganesh.png')">+</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="kamakshi-image.png" alt="Pooja Kit " class="product-img">
+            <h3 class="product-name">kamakshi vrath Kit</h3>
+            <p class="product-quantity">Includes: 12 Items <br> price : 200 rs</p>
+            <div class="quantity-counter">
+                <button class="decrement">-</button>
+                <span class="quantity" data-id="pooja-kit-2">0</span>
+                <button class="increment">+</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="satya1.jpg" alt="Pooja Kit " class="product-img">
+            <h3 class="product-name">Sathyanarayana vrath Kit</h3>
+            <p class="product-quantity">Includes: 12 Items <br> price : 200 rs</p>
+            <div class="quantity-counter">
+                <button class="decrement">-</button>
+                <span class="quantity" data-id="pooja-kit-3">0</span>
+                <button class="increment">+</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="shiva.jpg" alt="Pooja Kit " class="product-img">
+            <h3 class="product-name">shiva pooja Kit</h3>
+            <p class="product-quantity">Includes: 12 Items <br> price : 200 rs</p>
+            <div class="quantity-counter">
+                <button class="decrement">-</button>
+                <span class="quantity" data-id="pooja-kit-4">0</span>
+                <button class="increment">+</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="lakshmi.jpg" alt="Pooja Kit " class="product-img">
+            <h3 class="product-name">lakshmi pooja Kit</h3>
+            <p class="product-quantity">Includes: 12 Items <br> price : 200 rs</p>
+            <div class="quantity-counter">
+                <button class="decrement">-</button>
+                <span class="quantity" data-id="pooja-kit-5">0</span>
+                <button class="increment">+</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="wedding.jpg" alt="Pooja Kit " class="product-img">
+            <h3 class="product-name"> Wedding Pooja Kit </h3>
+            <p class="product-quantity">Includes: 12 Items <br> price : 200 rs</p>
+            <div class="quantity-counter">
+                <button class="decrement">-</button>
+                <span class="quantity" data-id="pooja-kit-6">0</span>
+                <button class="increment">+</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="hanuman.jpg" alt="Pooja Kit " class="product-img">
+            <h3 class="product-name">Hanuman Pooja Kit</h3>
+            <p class="product-quantity">Includes: 12 Items <br> price : 200 rs</p>
+            <div class="quantity-counter">
+                <button class="decrement">-</button>
+                <span class="quantity" data-id="pooja-kit-7">0</span>
+                <button class="increment">+</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="devi.jpg" alt="Pooja Kit " class="product-img">
+            <h3 class="product-name">Durga Pooja Kit</h3>
+            <p class="product-quantity">Includes: 12 Items <br> price : 200 rs</p>
+            <div class="quantity-counter">
+                <button class="decrement">-</button>
+                <span class="quantity" data-id="pooja-kit-8">0</span>
+                <button class="increment">+</button>
+            </div>
+        </div>
+            <div class="product-card">
+                <img src="festive.jpg" alt="Pooja Kit " class="product-img">
+                <h3 class="product-name">Festive Pooja Kit</h3>
+                <p class="product-quantity">Includes: 12 Items <br> price : 200 rs</p>
+                <div class="quantity-counter">
+                    <button class="decrement">-</button>
+                    <span class="quantity" data-id="pooja-kit-9">0</span>
+                    <button class="increment">+</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="daily.jpg" alt="Pooja Kit " class="product-img">
+                <h3 class="product-name">Daily Worship Kit</h3>
+                <p class="product-quantity">Includes: 12 Items <br> price : 200 rs</p>
+                <div class="quantity-counter">
+                    <button class="decrement">-</button>
+                    <span class="quantity" data-id="pooja-kit-10">0</span>
+                    <button class="increment">+</button>
+                </div>
+            </div>    
+        </div>
+        <!-- Add more cards as needed -->
+    </div>
+</section>
+
+
+<!-- Cart Banner -->
+<div class="cart-banner">
+    <div class="cart-info">
+        Total Items: <span class="total-items">0</span>
+    </div>
+    <button class="view-cart-btn" onclick="window.location.href='cart.html'">View Cart</button>
+    <button class="checkout-btn" onclick="window.location.href='checkout.html'">Checkout</button>
+</div>
+
+<!-- Floating Quote Now Icon -->
+<div id="quoteIcon" class="quote-icon">
+    💬 Quote Now
+</div>
+
+<!-- Modal for Bidding Form -->
+<div id="biddingModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <h2>Bid for Kamakshi Pooja Store</h2>
+        <form id="biddingForm">
+            <label for="investorName">Name:</label>
+            <input type="text" id="investorName" placeholder="Your Full Name" required />
+
+            <label for="contactInfo">Contact Info:</label>
+            <input type="text" id="contactInfo" placeholder="Email or Phone Number" required />
+
+            <label for="bidAmount">Bid Amount (₹):</label>
+            <input type="number" id="bidAmount" placeholder="Enter Amount" required />
+
+            <label for="proposalMessage">Message (Optional):</label>
+            <textarea id="proposalMessage" placeholder="Your Proposal"></textarea>
+
+            <button type="submit">Submit Bid</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo and About -->
+        <div class="footer-about">
+            <img src="kamakshi.png" alt="Pooja Store Logo" class="footer-logo">
+            <p>
+                Welcome to the Pooja Store, your one-stop shop for customizable pooja items. 
+                We bring tradition and modern convenience together.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#pooja-kits">Pooja Kits</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Temple Road, Hyderabad, India</p>
+            <p><i class="fas fa-phone"></i> +91 8465858581</p>
+            <p><i class="fas fa-envelope"></i> support@poojastore.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Pooja Store. All Rights Reserved by <span class="kanna">Rajesh kanna Darla.</span></p>
+    </div>
+</footer>
+
+    <script src="script1.js"></script>
+    <script src="path.js"></script>
+    <script src="modal.js" defer></script>
+</body>
+</html>
